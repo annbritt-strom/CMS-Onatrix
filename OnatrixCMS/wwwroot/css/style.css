@@ -2,12 +2,44 @@
 :root {
     --clr-main: #4F5955;
     --clr-sub-1: #F2EDDC;
+    --clr-sub-3: #D9C3A9;
+    --body-text: #535656;
+    --white: #FFFFFF;
+    --white-100: #F7F7F7;
+    --white-200: #EAEAEA;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+h1 {
+    font-size: 4.375rem;
+    letter-spacing: 0;
+    color: var(--clr-main);
+}
+
+h3 {
+    font-size: 2.5rem;
+    color: var(--clr-main);
+}
+
+h4 {
+
+}
+
+h5 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--clr-main);
+}
+
+.label {
+    font-size: 0.875rem;
+    color: var(--clr-sub-3);
+    font-weight: 600;
 }
 
 body {
@@ -28,13 +60,21 @@ footer a {
 }
 
 .container {
-    /*background-color: lightcoral;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
     width: 70vw;
     padding: 1rem 0;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 70vw;
+    padding: 4rem 0;
 }
 
 .information {
@@ -57,8 +97,10 @@ footer a {
     gap: 1rem;
 }
 
+/* Rich text editor */
 
-/* Home Page CSS */
+
+/* Hero Section */
 .hero {
     position: relative;
     display: flex;
@@ -98,8 +140,49 @@ footer a {
     justify-content: center;
 }
 
-h1 {
-    font-size: 4.375rem;
-    letter-spacing: 0;
-    color: var(--clr-main);
+/* Service Section */
+.services-section {
+    background-color: var(--bg, #ffffff);
+}
+
+.services-section .section-container {
+    gap: 2rem;
+}
+
+.service-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.service-card {
+    width: 370px;
+    background-color: var(--white);
+    border: 1.5px solid var(--white-200);
+    border-radius: .2px;
+}
+
+.service-card img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.service-title {
+    padding: 1.5rem;
+}
+
+.service-description {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    color: var(--body-text);
+    font-size: 0.875rem;
+}
+
+.affiliations-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
 }

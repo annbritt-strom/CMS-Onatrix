@@ -4,16 +4,16 @@
     var content = (ContentModels.AffiliateSection)Model.Content;
 }
 
-<section class="affiliate-section">
-    <div class="section-container">
-        <div class="affiliations-wrapper">
-            @foreach (var item in content.AffiliationList)
-            {
-                var company = item;
-
-                    <partial name="Partials/BlockList/Components/AffiliateCompany" model="company" />
-
-            }
+@if (content?.AffiliationList != null && content.AffiliationList.Any())
+{
+    <section class="affiliate-section">
+        <div class="section-container">
+            <div class="affiliations-wrapper">
+                @foreach (var item in content.AffiliationList)
+                {
+                    <partial name="Partials/BlockList/Components/AffiliateCompany" model="item" />
+                }
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+}

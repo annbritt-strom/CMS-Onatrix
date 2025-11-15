@@ -186,12 +186,12 @@ footer a {
     font-size: 1rem;
     position: relative;
     overflow: hidden;
-    height: 900px;
 }
 
 .our-story .section-container {
     justify-content: center;
     align-items: center;
+    padding-bottom: 25rem;
 }
 
 .story-bg {
@@ -230,8 +230,39 @@ footer a {
 }
 
 
-/* Affiliations Section */
+/* Success Section */
+.success-section {
+    background-color: var(--clr-main);
+}
 
+.success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-stories-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.success-story-card {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-amount {
+    font-size: 6rem;
+    color: var(--clr-sub-3);
+    font-weight: 600;
+}
+
+/* Affiliations Section */
 .affiliations-wrapper {
     display: flex;
     align-items: center;

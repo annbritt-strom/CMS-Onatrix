@@ -1,0 +1,55 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+	Layout = null;
+
+	var pageTitle = !string.IsNullOrEmpty(Model.Name) && Model.Name !="Home" ? $"Onatrix | {Model.Name}" : "Onatrix";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@pageTitle</title>
+
+	<link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+	<section class="information">
+		<div class="container">
+			<div class="information-wrapper">
+				<div>
+					<p>Klarabergsviadukten 90, 111 64 Stockholm</p>
+				</div>
+				<div>
+					<ul class="social-media">
+						<li>facebook</li>
+						<li>twitter</li>
+						<li>instagram</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<header>
+		<div class="container">
+			Header
+		</div>
+	</header>
+	
+	@RenderBody()
+
+	<footer>
+		<div class="container">
+			<p> 
+				© Onatrix. All Rights Reserved. Credits to 
+				<a href="/">Themesflat</a>
+			</p>
+		</div>
+	</footer>
+
+</body>
+</html>

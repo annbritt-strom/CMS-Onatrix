@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.AffiliateSection)Model.Content;
+}
+
+@if (content?.AffiliationList != null && content.AffiliationList.Any())
+{
+    <section class="affiliate-section">
+        <div class="section-container">
+            <div class="affiliations-wrapper">
+                @foreach (var item in content.AffiliationList)
+                {
+                    <partial name="Partials/BlockList/Components/AffiliateCompany" model="item" />
+                }
+            </div>
+        </div>
+    </section>
+}

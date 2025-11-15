@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ContactSection)Model.Content;
+}
+
+<section class="contact-section">
+    <div class="section-container">
+        <div class="contact-content-wrapper">
+            <div class="contact-left">
+                @if (content.ContactImg != null)
+                {
+                    <img src="@content.ContactImg.Url()" />
+                }
+            </div>
+            <div class="contact-right">
+                @content.ContactTitle
+                <div class="contact-list">
+                    @foreach (var item in content.ContactList!)
+                    {
+                        <partial name="Partials/BlockList/Components/Contact" model="item" />
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

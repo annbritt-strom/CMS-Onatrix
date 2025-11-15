@@ -16,7 +16,7 @@
 }
 
 h1 {
-    font-size: 4.375rem;
+    font-size: 4rem;
     letter-spacing: 0;
     color: var(--clr-main);
 }
@@ -109,10 +109,10 @@ footer a {
 }
 
 .hero img {
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
     inset: 0;
 }
 
@@ -179,6 +179,58 @@ footer a {
     color: var(--body-text);
     font-size: 0.875rem;
 }
+
+/* Our Story Section */
+.our-story {
+    color: var(--body-text);
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    height: 900px;
+}
+
+.our-story .section-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.story-bg {
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.story-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 50%;
+    padding: 2rem 0;
+}
+
+.our-story a {
+    text-decoration: none;
+    background-color: var(--clr-main);
+    padding: 0.7rem;
+    width: 11.3rem;
+    color: var(--clr-sub-1);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Affiliations Section */
 
 .affiliations-wrapper {
     display: flex;

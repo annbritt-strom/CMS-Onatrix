@@ -55,7 +55,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.4+0d2393d")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("successAmount")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString SuccessAmount => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "successAmount");
+		public virtual string SuccessAmount => this.Value<string>(_publishedValueFallback, "successAmount");
 
 		///<summary>
 		/// Success Story
@@ -71,6 +71,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.4+0d2393d")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("successName")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString SuccessName => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "successName");
+		public virtual string SuccessName => this.Value<string>(_publishedValueFallback, "successName");
 	}
 }

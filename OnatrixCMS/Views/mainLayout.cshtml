@@ -15,30 +15,11 @@
 	<title>@pageTitle</title>
 
 	<link href="~/css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
-	<section class="information">
-		<div class="container">
-			<div class="information-wrapper">
-				<div>
-					<p>Klarabergsviadukten 90, 111 64 Stockholm</p>
-				</div>
-				<div>
-					<ul class="social-media">
-						<li>facebook</li>
-						<li>twitter</li>
-						<li>instagram</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	<header>
-		<div class="container">
-			Header
-		</div>
-	</header>
+	<partial name="Partials/Layout/_Topbar" />
+	<partial name="Partials/Layout/_Header" />
 	
 	@RenderBody()
 

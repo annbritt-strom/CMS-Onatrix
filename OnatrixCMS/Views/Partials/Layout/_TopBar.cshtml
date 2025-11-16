@@ -1,0 +1,56 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+    var contactAddress = siteSettings?.ContactAddress ?? "Not available";
+}
+
+<section class="information">
+	<div class="container">
+		<div class="information-wrapper">
+			<div class="topbar-address">
+				<p>@contactAddress</p>
+			</div>
+
+			<div class="platforms-wrapper">
+				@if (siteSettings?.PlatformList != null)
+				{
+                    foreach (var item in siteSettings.PlatformList)
+                    {
+                        if (item.Content is SocialMediaItem mediaItem)
+						{
+							switch (mediaItem.PlatformName!.ToLower())
+                            {
+                                case "facebook":
+                                    <a href="@mediaItem.PlatformAccountUrl" target="_blank" class="platform-link">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    break;
+                                case "twitter":
+                                    <a href="@mediaItem.PlatformAccountUrl" target="_blank" class="platform-link">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    break;
+                                case "instagram":
+                                    <a href="@mediaItem.PlatformAccountUrl" target="_blank" class="platform-link">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    break;
+                                case "linkedin":
+                                    <a href="@mediaItem.PlatformAccountUrl" target="_blank" class="platform-link">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </a>
+                                    break;
+                                default:
+
+                                    break;
+                            }
+						}
+                    }
+				}
+			</div>
+		</div>
+	</div>
+</section>

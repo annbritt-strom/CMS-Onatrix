@@ -63,6 +63,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.4+0d2393d")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("companyName")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString CompanyName => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "companyName");
+		public virtual string CompanyName => this.Value<string>(_publishedValueFallback, "companyName");
 	}
 }

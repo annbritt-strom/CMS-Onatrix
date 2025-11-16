@@ -261,7 +261,7 @@ footer a {
 
 /* Service Section */
 .services-section {
-    background-color: var(--white-100);
+    background-color: var(--service-bg, var(--white-100));
 }
 
 .services-section .section-container {
@@ -296,7 +296,7 @@ footer a {
 
 .service-card:hover {
     border: 1.5px solid var(--clr-sub-3);
-    box-shadow: 10px 10px var(--clr-sub-3);
+    box-shadow: 0px 0px 10px var(--clr-sub-1);
 }
 
 .service-card img {
@@ -408,7 +408,7 @@ footer a {
 
 /* Contact Section */
 .contact-section {
-    background-color: var(--white-100);
+    background-color: var(--contact-bg, var(--white-100));
 }
 
 .contact-section .section-container {
@@ -523,4 +523,38 @@ footer a {
 .member-role-text {
     color: var(--body-text);
     font-size: 0.875rem;
+}
+
+/* Service Details */
+
+.details-wrapper {
+    display:flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.details-content {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    gap: 2rem;
+}
+
+.vertical-line {
+    display: block;
+    width: 1px;
+    background-color: var(--white-200);
+}
+
+/* Asides - service details */
+.detail-aside {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.widget-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }

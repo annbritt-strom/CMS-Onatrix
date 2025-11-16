@@ -3,6 +3,7 @@
 @{
     var content = (ContentModels.ServiceSection)Model.Content;
     var settings = Model.Settings as ContentModels.ServiceSettings;
+    var bgColor = settings?.ServiceBgColor;
 
     var current = Umbraco.AssignedContentItem;
     var siteRoot = current?.Root();
@@ -11,7 +12,7 @@
     var items = servicePage?.Children <ServiceDetail>()?.OrderByDescending(x => x.CreateDate).ToList() ?? [];
 }
 
-<section class="services-section">
+<section class="services-section" style="--service-bg:@bgColor">
     <div class="section-container">
         <div class="service-text-wrapper">
             @if (settings!.ShowServiceLabel)

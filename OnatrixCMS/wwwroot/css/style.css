@@ -52,6 +52,7 @@ footer {
     color: #4F5955;
     background-color: #0E0E0E;
     font-size: 0.875rem;
+    padding: 1rem 0;
 }
 
 footer a {
@@ -65,7 +66,6 @@ footer a {
     justify-content: center;
     margin: auto;
     width: 70vw;
-    padding: 1rem 0;
 }
 
 .section-container {
@@ -77,9 +77,48 @@ footer a {
     padding: 4rem 0;
 }
 
+/* Header */
+.onatrix-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.onatrix-logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.page-list li {
+    list-style: none;
+}
+
+.page-list a {
+    text-decoration: none;
+    color: var(--clr-main);
+    font-weight: 600;
+}
+
+.page-list .current a {
+    color: var(--clr-sub-3);
+}
+
+
+/* Top bar */
+
 .information {
     background-color: var(--clr-main);
     color: white;
+    font-size: .8rem;
 }
 
 .information-wrapper {
@@ -87,18 +126,30 @@ footer a {
     width: 100%; 
     justify-content: space-between;
 }
-
-.information ul {
-    list-style: none;
-}
-
-.social-media {
+.topbar-address {
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Rich text editor */
+.platforms-wrapper {
+    display: flex;
+}
 
+.platform-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    border-left: 1.7px solid #FFFFFF33;
+    text-decoration: none;
+    color: var(--white);
+    width: 1rem;
+}
+
+.platforms-wrapper .platform-link:last-child {
+    border-right: 1.7px solid #FFFFFF33;
+}
 
 /* Hero Section */
 .hero {

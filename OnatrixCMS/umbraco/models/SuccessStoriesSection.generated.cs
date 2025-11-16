@@ -55,7 +55,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.3.4+0d2393d")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("successLabel")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString SuccessLabel => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "successLabel");
+		public virtual string SuccessLabel => this.Value<string>(_publishedValueFallback, "successLabel");
 
 		///<summary>
 		/// SuccessList

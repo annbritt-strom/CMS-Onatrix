@@ -181,6 +181,7 @@ footer a {
     align-items: center;
     justify-content: center;
     gap: 0.7rem;
+    padding-top: 0.8rem;
 }
 
 .divider {
@@ -274,11 +275,28 @@ footer a {
     gap: 0.9rem;
 }
 
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
 .service-card {
-    width: 370px;
+    width: 100%;
     background-color: var(--white);
     border: 1.5px solid var(--white-200);
     border-radius: .2px;
+    overflow: hidden;
+}
+
+.service-card a {
+    text-decoration: none;
+    transition: all;
+}
+
+.service-card:hover {
+    border: 1.5px solid var(--clr-sub-3);
+    box-shadow: 10px 10px var(--clr-sub-3);
 }
 
 .service-card img {
@@ -439,6 +457,11 @@ footer a {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    color: var(--clr-main);
+}
+
+.contact-type {
+    font-weight: 600;
 }
 
 /* Team Section */

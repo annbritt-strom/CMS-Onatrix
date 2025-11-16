@@ -78,6 +78,11 @@ footer a {
 }
 
 /* Header */
+
+.header {
+    box-shadow: 0px 10px 3px #000000;
+}
+
 .onatrix-nav {
     display: flex;
     align-items: center;
@@ -106,6 +111,10 @@ footer a {
     text-decoration: none;
     color: var(--clr-main);
     font-weight: 600;
+}
+
+.page-list a:hover {
+    color: var(--clr-sub-3);
 }
 
 .page-list .current a {
@@ -149,6 +158,56 @@ footer a {
 
 .platforms-wrapper .platform-link:last-child {
     border-right: 1.7px solid #FFFFFF33;
+}
+
+/* Page Banner */
+.page-banner {
+    position: relative;
+    background-color: var(--white-100);
+    background-image: url("../images/banner-left.svg"), url("../images/banner-right.svg");
+    background-position: left bottom, right top;
+    background-repeat: no-repeat, no-repeat;
+
+}
+
+.banner-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+.divider {
+    display: flex;
+}
+
+.breadcrumb li {
+    list-style: none;
+    color: var(--body-text);
+    display: flex;
+    gap: 0.7rem;
+    font-size: .9rem;
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: var(--body-text);
+}
+
+.breadcrumb li a:hover {
+    text-decoration: none;
+    color: var(--clr-sub-3);
+}
+
+
+.breadcrumb .active {
+    color: var(--clr-sub-3);
 }
 
 /* Hero Section */

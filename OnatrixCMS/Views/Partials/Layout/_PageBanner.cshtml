@@ -1,0 +1,39 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<IPageBanner>
+@using Umbraco.Cms.Core.PublishedCache
+@using Umbraco.Cms.Core.Routing
+@using Umbraco.Cms.Core.Services.Navigation
+
+@inject IPublishedContentCache PublishedContentCache
+@inject IDocumentNavigationQueryService DocumentNavigationQueryService
+@inject IPublishedUrlProvider PublishedUrlProvider
+
+@{
+    var selection = Model.Ancestors().ToArray();
+}
+
+
+
+<section class="page-banner">
+    <div class="section-container">
+        <div class="banner-text">
+            <h3>@Model.PageTitle</h3>
+
+            <div class="breadcrub-wrapper">
+                @if (selection?.Length > 0)
+                {
+                    <ul class="breadcrumb">
+                        @foreach (var item in selection.OrderBy(x => x.Level))
+                        {
+                            <li><a class="breadcrumb-link" href="@item.Url(PublishedUrlProvider)">@item.Name</a>
+                                <span class="divider"> > </span>
+                            </li>
+                        }
+
+                        <li class="active">@Model.Name</li>
+                    </ul>
+                }
+
+            </div>
+        </div>
+    </div>
+</section>

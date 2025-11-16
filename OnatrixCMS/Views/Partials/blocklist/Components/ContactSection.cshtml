@@ -10,7 +10,9 @@
             <div class="contact-left">
                 @if (content.ContactImg != null)
                 {
-                    <img src="@content.ContactImg.Url()" />
+                    <div class="contact-image-wrapper">
+                        <img src="@content.ContactImg.Url()" />
+                    </div>
                 }
             </div>
             <div class="contact-right">

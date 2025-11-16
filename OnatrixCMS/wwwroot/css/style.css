@@ -279,6 +279,21 @@ footer a {
 }
 
 /* Contact Section */
+.contact-section {
+    background-color: var(--white-100);
+}
+
+.contact-section .section-container {
+    padding-top: 2rem;
+    padding-bottom: 0;
+}
+
+.contact-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
 .contact-content-wrapper {
     display: flex;
     gap: 4rem
